@@ -1,0 +1,5 @@
+cd /home/discord${1}
+tar xvfz  /home/discord.tar.gz
+chown -R discord${1}:discord${1} ./Discord
+chmod -R 777 ./Discord
+

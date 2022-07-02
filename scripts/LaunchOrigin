@@ -1,0 +1,6 @@
+#!/bin/bash
+cd ~/.wine/
+cd drive_c/
+cd 'Program Files (x86)'/
+cd Origin
+ wine Origin.exe 

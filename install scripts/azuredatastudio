@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo wget https://go.microsoft.com/fwlink/?linkid=2198880
+rpm -i azuredatastudio-linux-1.37.0.rpm

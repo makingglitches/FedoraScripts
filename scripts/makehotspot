@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "run with makehotspot <networkname> <password>"
+proftpd
+lnxrouter --ap wlo1 $1 -p $2 -g 192.168.1.1
+

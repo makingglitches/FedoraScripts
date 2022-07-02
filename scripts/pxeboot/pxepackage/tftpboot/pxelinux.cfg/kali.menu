@@ -1,0 +1,22 @@
+MENU TITLE Kali Linux Boot Menu
+
+# try appending a string to enter install just to see what it does.
+ LABEL Kali64 
+ MENU LABEL Boot Kali 64bit
+ KERNEL memdisk
+ INITRD kaliisos/kali64.iso
+ APPEND iso raw
+
+ LABEL Kali32
+ MENU LABEL Boot Kali 32bit
+ KERNEL memdisk
+ INITRD kaliisos/kali32.iso
+ APPEND iso raw
+
+MENU SEPARATOR
+
+ LABEL MainMenu
+ MENU LABEL ^Return to Main Menu
+ MENU DEFAULT
+ KERNEL menu.c32
+ APPEND pxelinux.cfg/default

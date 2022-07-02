@@ -1,0 +1,75 @@
+ DEFAULT menu.c32
+ PROMPT 0
+ 
+
+#test comment
+
+ MENU TITLE Repair Utilities
+ MENU INCLUDE pxelinux.cfg/graphics.conf
+ MENU BACKGROUND sephiroth.jpg
+
+#Program that loads a fully loaded NEW linux kernel
+    #Boots in text mode
+    #Follows embedded configuration to access STAGING mysql schema to dump the machine's build
+    #PCI, USB, Memory Size, Motherboard Identifier, and CPU stats, and anything else it can get
+    #Into a series of database tables in the 'staging' environment
+    #Technician later on goes to a ui, selects this bundle of information and selects 'post it' option 
+    #After selecting repairshop customer
+    #Simple implementation will use slightly modified opensource tools which output to stdout
+    #Piping this information to a custom 'mysqlwriter' module which will read from stdin 
+    #and deserialize this information, and then write it to the mysql database
+    #optionally at the beginning allow the user to enter a string identifier for the display string 
+	#shown in the UI
+	LABEL CustomerEntry
+	MENU LABEL ^Customer Data Entry Module
+    MENU DEFAULT
+	KERNEL memdisk
+	INITRD /testsisos/customerhardware.iso
+	APPEND iso raw
+
+	LABEL Paragon
+	MENU LABEL ^Launch Paragon Hardisk Manager
+	KERNEL memdisk
+	INITRD /paragon/paragon.iso
+	APPEND iso raw
+ 
+
+ LABEL TestPE
+ MENU LABEL Test Windoes PE
+ KERNEL memdisk
+ INITRD /winpeisos/winpe.iso
+ APPEND iso raw 
+
+# Contains tools to gather information.
+ LABEL TestsMenu
+   MENU LABEL ^Diagnostics and Benchmarking...
+   KERNEL menu.c32
+   APPEND pxelinux.cfg/graphics.conf pxelinux.cfg/diagnostics.menu
+
+LABEL Kali
+MENU LABEL Kali Linux...
+KERNEL menu.c32
+APPEND pxelinux.cfg/graphics.conf pxelinux.cfg/kali.menu
+
+Label InstallLinux
+MENU LABEL Install Linux...
+KERNEL menu.c32
+APPEND pxelinux.cfg/graphics.conf pxelinux.cfg/linuxes.menu
+
+Label InstallWindows
+MENU LABEL Install Windows...
+KERNEL menu.c32
+APPEND pxelinux.cfg/graphics.conf pxelinux.cfg/windows.menu
+
+	MENU SEPARATOR
+
+LABEL bootlocal
+   MENU LABEL ^Boot Local Operating System
+   LOCALBOOT 0
+
+Label TestVesa
+MENU LABEL Test Vesa Option
+KERNEL vesamenu.c32
+APPEND pxelinux.cfg/graphics.conf pxelinux.cfg/default
+
+

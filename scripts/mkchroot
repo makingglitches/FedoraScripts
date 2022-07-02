@@ -1,0 +1,18 @@
+mount -t btrfs -o subvol=root  /dev/sda3 /mnt 
+mount -t btrfs -o subvol=home /dev/sda3 /mnt/home
+
+
+mount --bind /dev /mnt/dev 
+mount -t proc /proc /mnt/proc
+mount -t sysfs /sys /mnt/sys
+mount -t tmpfs tmpfs /mnt/run
+mount /dev/sda2 /mnt/boot
+mount /dev/sda1 /mnt/boot/efi
+
+mkdir -p /mnt/run/systemd/resolve/
+echo 'nameserver 1.1.1.1' > /mnt/run/systemd/resolve/stub-resolv.conf
+
+
+cd /mnt
+
+

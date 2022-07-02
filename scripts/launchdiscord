@@ -1,0 +1,2 @@
+#!/bin/bash
+su -l discord${1} -c /home/discord${1}/Discord/Discord

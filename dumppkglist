@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# get the installed package list
+dnf list installed | tr -s ' ' |  ./splitdelim.py  0 1 >pkglist.txt

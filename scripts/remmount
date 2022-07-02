@@ -1,0 +1,5 @@
+#!/bin/bash
+umount -l $1/boot/efi
+umount -l $1/boot
+umount -l $1
+losetup -D /dev/loop$2

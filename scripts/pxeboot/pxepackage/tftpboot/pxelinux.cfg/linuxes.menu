@@ -1,0 +1,65 @@
+MENU TITLE Install Linux Distributions...
+
+ LABEL Kali64 
+ MENU LABEL Install Kali 64bit
+ KERNEL memdisk
+ INITRD kaliisos/kali64.iso
+ APPEND iso raw
+
+ LABEL Kali32
+ MENU LABEL Install Kali 32bit
+ KERNEL memdisk
+ INITRD kaliisos/kali32.iso
+ APPEND iso raw
+
+  LABEL Mint32
+ MENU LABEL Install Mint 32bit
+ KERNEL memdisk
+ INITRD mintisos/mint32.iso
+ APPEND iso raw
+
+LABEL Mint64
+ MENU LABEL Install Mint 64bit
+ KERNEL memdisk
+ INITRD mintisos/mint64.iso
+ APPEND iso raw
+
+LABEL Debian32
+ MENU LABEL Install Debian 32bit
+ KERNEL memdisk
+ INITRD debianisos/debian32.iso
+ APPEND iso raw
+
+LABEL Debian64
+ MENU LABEL Install Debian 64bit
+ KERNEL memdisk
+ INITRD debianisos/debian64.iso
+ APPEND iso raw
+
+LABEL Ubuntu32
+ MENU LABEL Install Ubuntu 32bit
+ KERNEL memdisk
+ INITRD ubuntuisos/ubuntu32.iso
+ APPEND iso raw
+
+LABEL Ubuntu64
+ MENU LABEL Install Ubuntu 64bit
+ KERNEL memdisk
+ INITRD ubuntuisos/ubuntu64.iso
+ APPEND iso raw
+
+LABEL CentOS
+ MENU LABEL Install CentOS 32 bit
+ KERNEL memdisk
+ INITRD centisos/cent-min.iso
+ APPEND iso raw
+
+
+
+
+MENU SEPARATOR
+
+ LABEL MainMenu
+ MENU LABEL ^Return to Main Menu
+ KERNEL menu.c32
+ APPEND pxelinux.cfg/default

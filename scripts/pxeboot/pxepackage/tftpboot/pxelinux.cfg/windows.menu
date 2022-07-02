@@ -1,0 +1,105 @@
+MENU TITLE Install Windows Distributions...
+
+LABEL win7-32
+ MENU LABEL Install Windows 7 Home 32bit
+ KERNEL memdisk
+ INITRD winisos/win7-32.iso
+ APPEND iso raw
+
+LABEL win7-64 
+ MENU LABEL Install Windows 7 Home 64bit
+ KERNEL memdisk
+ INITRD winisos/win7-64.iso
+ APPEND iso raw
+
+LABEL winxp32
+ MENU LABEL Install Windows XP Home 32bit
+ KERNEL memdisk
+ INITRD winisos/winxp-32.iso
+ APPEND iso raw
+
+LABEL winxp64
+ MENU LABEL Install Windows XP Home 64bit
+ KERNEL memdisk
+ INITRD winisos/winxp-64.iso
+ APPEND iso raw
+
+LABEL win8-32
+ MENU LABEL Install Windows 8 Home 32bit
+ KERNEL memdisk
+ INITRD winisos/win8-32.iso
+ APPEND iso raw
+
+LABEL win8-64 
+ MENU LABEL Install Windows 8 Home 64bit
+ KERNEL memdisk
+ INITRD winisos/win8-64.iso
+ APPEND iso raw
+
+LABEL win10-32
+ MENU LABEL Install Windows 10 Home 32bit
+ KERNEL memdisk
+ INITRD winisos/win10-32.iso
+ APPEND iso raw
+
+LABEL win10-64 
+ MENU LABEL Install Windows 10 Home 64bit
+ KERNEL memdisk
+ INITRD winisos/win10-64.iso
+ APPEND iso raw
+
+LABEL win7-32-pro
+ MENU LABEL Install Windows 7 Pro 32bit
+ KERNEL memdisk
+ INITRD winisos/win7-32-pro.iso
+ APPEND iso raw
+
+LABEL win7-64-pro
+ MENU LABEL Install Windows 7 Pro 64bit
+ KERNEL memdisk
+ INITRD winisos/win7-64-pro.iso
+ APPEND iso raw
+
+LABEL winxp32-pro
+ MENU LABEL Install Windows XP Pro 32bit
+ KERNEL memdisk
+ INITRD winisos/winxp-32-pro.iso
+ APPEND iso raw
+
+LABEL winxp64-pro
+ MENU LABEL Install Windows XP Pro 64bit
+ KERNEL memdisk
+ INITRD winisos/winxp-64-pro.iso
+ APPEND iso raw
+
+LABEL win8-32-pro
+ MENU LABEL Install Windows 8 Home 32bit
+ KERNEL memdisk
+ INITRD winisos/win8-32-home.iso
+ APPEND iso raw
+
+LABEL win8-64-pro
+ MENU LABEL Install Windows 8 Home 64bit
+ KERNEL memdisk
+ INITRD winisos/win8-64-home.iso
+ APPEND iso raw
+
+LABEL win10-32-pro
+ MENU LABEL Install Windows 10 Pro 32bit
+ KERNEL memdisk
+ INITRD winisos/win10-32-pro.iso
+ APPEND iso raw
+
+LABEL win10-64-pro
+ MENU LABEL Install Windows 10 Pro 64bit
+ KERNEL memdisk
+ INITRD winisos/win10-64-pro.iso
+ APPEND iso raw
+
+
+MENU SEPARATOR
+
+ LABEL MainMenu
+ MENU LABEL ^Return to Main Menu
+ KERNEL menu.c32
+ APPEND pxelinux.cfg/default

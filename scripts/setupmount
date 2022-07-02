@@ -1,0 +1,9 @@
+#!/bin/bash
+loop=$(losetup -f)
+echo "using ${loop}"
+
+losetup -P ${loop} $1
+
+mount ${loop}p3 $2
+mount ${loop}p2 $2/boot
+mount ${loop}p1 $2/boot/efi

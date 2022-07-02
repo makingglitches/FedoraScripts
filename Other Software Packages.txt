@@ -1,0 +1,55 @@
+dbeaver
+
+https://dbeaver.io/download/?start&os=linux&arch=x86_64&dist=rpm
+
+mysql 
+
+https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/
+
+gitkraken
+
+https://www.gitkraken.com/
+
+sqlite studio
+
+https://sqlitestudio.pl/
+
+
+bleachbit
+
+https://www.bleachbit.org/
+
+
+nodejs
+
+https://nodejs.org/en/
+
+jupyter notebooks
+
+https://jupyter.org/
+
+
+geogebra
+
+https://www.geogebra.org/?lang=en
+
+
+original download
+(requires use of user-agent spoof)
+installs with wine just fine 
+
+https://www.origin.com/usa/en-us/store
+
+
+keepass
+
+https://keepass.info/
+
+
+VirtualBox 
+
+https://www.virtualbox.org/wiki/Linux_Downloads
+
+youtube-dl 
+
+https://youtube-dl.org/

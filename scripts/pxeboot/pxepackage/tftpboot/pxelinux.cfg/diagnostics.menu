@@ -1,0 +1,30 @@
+ MENU TITLE Diagnostics and Benchmarking
+ 
+
+	#Pretty self explanatory
+	LABEL HCIMemtest
+	MENU LABEL ^HCI Memtest
+	KERNEL memdisk
+	INITRD /testisos/hci.iso
+	APPEND iso raw
+	
+	LABEL Memtest86 
+	MENU LABEL ^Memtest x86
+	KERNEL memdisk
+	INITRD /testisos/memtest86.iso
+	APPEND iso raw
+
+	LABEL Thermal
+	MENU LABEL Thermal Benchmarks...
+	KERNEL menu.c32
+	APPEND pxelinux.cfg/graphics.conf pxelinux.cfg/thermals.menu
+
+	MENU SEPARATOR
+
+    LABEL MainMenu
+    MENU LABEL ^Return to Main Menu
+    KERNEL menu.c32
+    APPEND pxelinux.cfg/default
+
+
+	

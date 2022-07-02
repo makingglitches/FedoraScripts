@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo wget https://www.scootersoftware.com/bcompare-4.4.2.26348.x86_64.rpm
+
+sudo rpm --import https://www.scootersoftware.com/RPM-GPG-KEY-scootersoftware
+sudo yum install bcompare-4.4.2.26348.x86_64.rpm

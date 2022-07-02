@@ -1,0 +1,33 @@
+ MENU TITLE Thermal Data Gathering
+ 
+	#Performs prime95 and sensors loop writing data
+	#to selected customer profile
+	LABEL ThermalBenchWrite
+	MENU LABEL ^Thermal Benchmark and Write
+	KERNEL memdisk
+	INITRD /testsisos/thermalandwrite.iso
+	APPEND iso raw
+
+	#Starts a minimal console environment, starts prime95
+	#and displays results
+	LABEL ThermalBench
+	MENU LABEL ^Thermal Benchmark No Write
+	KERNEL memdisk
+	INITRD /testsisos/thermal.iso
+	APPEND iso raw
+
+
+	MENU SEPARATOR
+	
+
+	LABEL DiagnosticsMenu
+	MENU LABEL Return to Diagnostics Menu
+	KERNEL menu.c32
+    MENU DEFAULT
+	APPEN pxelinux.cfg/graphics.conf pxelinux.cfg/diagnostics.menu
+
+	LABEL ReturnMain
+	MENU LABEL Return to Main Menu
+	KERNEL menu.c32
+	APPEND pxelinux.cfg/default
+

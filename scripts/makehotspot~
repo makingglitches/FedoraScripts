@@ -1,0 +1,4 @@
+#!/bin/bash
+proftpd
+lnxrouter --ap wlo1 transfer -p killallchomos -g 192.168.1.1
+
